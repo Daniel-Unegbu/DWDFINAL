@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Clock, Star } from 'lucide-react';
+import { Clock, Star } from 'lucide-react';
 
 interface CourseCardProps {
   title: string;
@@ -10,13 +10,27 @@ interface CourseCardProps {
   features: string[];
 }
 
+const getLevelLogo = (level: string) => {
+  const logoMap: { [key: string]: string } = {
+    'A1': '/A1.png',
+    'A2': '/A2.png',
+    'B1': '/B1.png',
+    'B2': '/B2.png'
+  };
+  return logoMap[level] || '/A1.png';
+};
+
 export default function CourseCard({ title, level, description, price, duration, features }: CourseCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-3">
-          <div className="bg-blue-100 p-2 rounded-lg">
-            <BookOpen className="h-6 w-6 text-blue-900" />
+          <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+            <img 
+              src={getLevelLogo(level)} 
+              alt={`${level} Level Logo`}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <h3 className="text-xl font-bold text-gray-900">{title}</h3>

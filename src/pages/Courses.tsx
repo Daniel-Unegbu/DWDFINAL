@@ -1,6 +1,16 @@
 import React from 'react';
 import CourseCard from '../components/CourseCard';
 
+const getLevelLogo = (level: string) => {
+  const logoMap: { [key: string]: string } = {
+    'A1': '/A1.png',
+    'A2': '/A2.png', 
+    'B1': '/B1.png',
+    'B2': '/B2.png'
+  };
+  return logoMap[level] || '/A1.png';
+};
+
 export default function Courses() {
   const courses = [
     {
