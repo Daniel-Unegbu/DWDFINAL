@@ -33,7 +33,7 @@ export default function Contact() {
               <div className="space-y-6">
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/+2349123603401"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-100"
