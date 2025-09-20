@@ -27,12 +27,14 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <section className="bg-white py-16">
+      <section className="relative py-16 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("/wallpaperflare.com_wallpaper (7) (1).jpg")'}}>
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">
             Get in Touch with Us
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-200 relative z-10">
             Have questions about our courses? Want to start your German learning journey? 
             We're here to help you every step of the way.
           </p>
