@@ -70,7 +70,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-1">Email Us</h3>
-                    <p className="text-gray-600">hello@deutschwithdaniel.com</p>
+                    <p className="text-gray-600">deutschwithdaniel@gmail.com</p>
                   </div>
                 </div>
 
